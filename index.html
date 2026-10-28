@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find a place that feels like home with Rentness. Browse rental apartments, houses and studios.">
+  <title>Rentness — Find a place to call home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> Your next chapter starts with the right address <span class="announcement-link">Explore homes <span aria-hidden="true">↗</span></span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Rentness home">
+      <span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 18.5 20 6l15 12.5v15a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/><path d="M15 35V22h10v13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/><path d="m3 19 17-14 17 14" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span>rentness<span class="brand-period">.</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#homes">Find a home</a>
+      <a class="nav-link" href="#how-it-works">How it works</a>
+      <a class="nav-link" href="#about">About us</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button favorite-nav" id="show-favorites" aria-label="Show saved properties" title="Saved properties"><span>♡</span><i id="favorite-count">0</i></button>
+      <button class="btn btn-outline list-property-btn" id="open-listing">List your property <span>↗</span></button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A BETTER WAY TO RENT</div>
+        <h1>Find a place<br>to <span class="headline-accent">call home.</span></h1>
+        <p class="hero-description">Thoughtfully listed homes. Clear details. Less searching, more living. Your next favourite place is closer than you think.</p>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>R</span><span>A</span><span>S</span><span>M</span></div>
+          <div><strong>Made for real life</strong><small>Find a home that fits your next chapter</small></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=90" alt="Bright modern home interior">
+        <div class="hero-image-overlay"></div>
+        <div class="hero-floating-card">
+          <span class="floating-icon">⌂</span>
+          <div><strong>Home, made simpler.</strong><small>Explore homes you'll love</small></div>
+          <span class="floating-arrow">↗</span>
+        </div>
+        <div class="hero-image-caption"><span class="caption-dot"></span> Spaces for every kind of story</div>
+      </div>
+      <div class="hero-bottom-label"><span>01 / 03</span><span class="hero-bottom-line"></span><span>FIND YOUR SPACE</span></div>
+    </section>
+
+    <section class="search-wrap" aria-label="Search for a rental property">
+      <form id="search-form" class="search-panel">
+        <label class="search-field location-field">
+          <span class="field-icon">⌖</span><span class="field-copy"><small>LOCATION</small><input id="search-location" type="search" placeholder="City, area or neighbourhood" autocomplete="off"></span>
+        </label>
+        <label class="search-field">
+          <span class="field-icon">⌂</span><span class="field-copy"><small>PROPERTY TYPE</small><select id="search-type"><option value="">All property types</option><option>Apartment</option><option>House</option><option>Studio</option><option>Penthouse</option></select></span>
+        </label>
+        <label class="search-field">
+          <span class="field-icon">₹</span><span class="field-copy"><small>MAX. MONTHLY RENT</small><select id="search-budget"><option value="">Any budget</option><option value="15000">Up to ₹15,000</option><option value="20000">Up to ₹20,000</option><option value="30000">Up to ₹30,000</option><option value="40000">Up to ₹40,000</option><option value="60000">Up to ₹60,000</option></select></span>
+        </label>
+        <button class="btn btn-primary search-button" type="submit"><span>⌕</span> Search homes</button>
+      </form>
+    </section>
+
+    <section class="trust-strip">
+      <div><span class="trust-icon">✳</span><span>Homes for every lifestyle</span></div>
+      <span class="trust-divider"></span>
+      <div><span class="trust-icon">◇</span><span>Details that matter</span></div>
+      <span class="trust-divider"></span>
+      <div><span class="trust-icon">♡</span><span>Your search, your way</span></div>
+    </section>
+
+    <section class="listings section-container" id="homes">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT ADDRESS</div><h2>Homes worth <span class="headline-accent">coming home to.</span></h2><p class="section-subtitle">Explore spaces picked for the way you want to live.</p></div>
+        <a class="text-link" href="#all-properties" id="view-all">View all homes <span>↗</span></a>
+      </div>
+      <div class="listing-toolbar">
+        <div class="results-label"><strong id="results-count">6 homes</strong><span> to explore</span></div>
+        <div class="toolbar-controls">
+          <button class="filter-chip" id="bedroom-filter">☷ <span id="bedroom-label">Bedrooms</span> <span>⌄</span></button>
+          <select id="sort-select" class="sort-select" aria-label="Sort properties"><option value="recommended">Sort: Recommended</option><option value="price-low">Rent: Low to high</option><option value="price-high">Rent: High to low</option><option value="largest">Largest first</option></select>
+        </div>
+      </div>
+      <div id="property-grid" class="property-grid"><div class="loading-state">Finding lovely places for you…</div></div>
+      <div id="empty-state" class="empty-state hidden"><span>⌂</span><h3>No homes found just yet</h3><p>Try a different location or clear your filters to see more places.</p><button class="btn btn-outline" id="clear-filters">Clear all filters</button></div>
+      <div class="load-more-wrap"><button id="reset-search" class="btn btn-outline">Reset search <span>↺</span></button></div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="section-container how-inner">
+        <div class="how-intro"><div class="eyebrow"><span class="eyebrow-line"></span> EASY AS IT SHOULD BE</div><h2>A little less searching.<br><span class="headline-accent">A lot more living.</span></h2><p>Finding your next home shouldn't feel like a full-time job. We keep the journey clear, simple, and centred around you.</p><a href="#homes" class="btn btn-primary">Start exploring <span>↗</span></a></div>
+        <div class="steps">
+          <article class="step"><div class="step-number">01</div><div class="step-icon">⌕</div><h3>Discover your space</h3><p>Search by location, budget, and the kind of home that suits you.</p></article>
+          <article class="step"><div class="step-number">02</div><div class="step-icon">♡</div><h3>Save what you love</h3><p>Keep your favourite places close while you compare your options.</p></article>
+          <article class="step"><div class="step-number">03</div><div class="step-icon">↗</div><h3>Make the connection</h3><p>Send an enquiry about a property and take the next step.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section-container">
+      <div class="cta-card"><div class="cta-text"><div class="eyebrow light"><span class="eyebrow-line"></span> HAVE A PLACE TO SHARE?</div><h2>Good homes deserve<br>great tenants.</h2><p>List your property and help someone find a place they’ll love.</p><button class="btn btn-white" id="open-listing-cta">List your property <span>↗</span></button></div><div class="cta-image"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Beautiful modern house exterior"></div><div class="cta-deco">⌂</div></div>
+    </section>
+
+    <section class="newsletter section-container"><div><div class="eyebrow"><span class="eyebrow-line"></span> A NOTE FROM RENTNESS</div><h2>Good places. Good stories.</h2><p>Have a question about a listing? Reach out and let’s help you take the next step.</p></div><a class="btn btn-outline" href="mailto:hello@rentness.example">Contact Rentness <span>↗</span></a></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="#"><span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 18.5 20 6l15 12.5v15a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/><path d="M15 35V22h10v13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/><path d="m3 19 17-14 17 14" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>rentness<span class="brand-period">.</span></span></a><p>Making the search for home feel a little more like home.</p><div class="footer-links"><a href="#homes">Find a home</a><a href="#how-it-works">How it works</a><button id="footer-listing">List a property</button></div></div><div class="footer-bottom"><span>© <span id="year"></span> Rentness. Made for finding home.</span><span>House rental & property listing platform</span></div></footer>
+
+  <div class="modal-backdrop hidden" id="modal-backdrop" role="presentation">
+    <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close dialog">×</button>
+      <div id="modal-content"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
